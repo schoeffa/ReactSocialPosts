@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Feed } from './Feed.js';
+import { AddPost } from './AddPost.js';
+import { tsConstructorType } from '@babel/types';
 
 function App() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      view: true
+    }
+  }
+
+  toggleView = () => {
+    console.log(view);
+    const view = !this.state.view;
+    this.setState({view: view});
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>My Thoughts</p>
+      <button onClick={this.toggleView}>New Thought</button>
+      <AddPost></AddPost>
+      <Feed></Feed>
     </div>
   );
 }
