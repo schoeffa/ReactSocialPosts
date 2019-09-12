@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.css';
 import { Feed } from './Feed.js';
 import { AddPost } from './AddPost.js';
-import './SocialPosts.css';
+import posts from './Posts.json';
 
 export class SocialPosts extends React.Component {
     constructor(props) {
@@ -22,8 +21,8 @@ export class SocialPosts extends React.Component {
             <div>
                 <p>My Thoughts</p>
                 <button onClick={this.toggleView}>New Thought</button>
-                <AddPost className={this.state.view ? 'Display' : 'Hide'}></AddPost>
-                <Feed></Feed>
+                <AddPost view={this.state.view}></AddPost>
+                <Feed posts={posts} view={!this.state.view}></Feed>
             </div>
         );
     }
