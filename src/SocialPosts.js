@@ -7,7 +7,8 @@ export class SocialPosts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            view: false
+            view: false,
+            feed: posts
         }
     }
 
@@ -16,13 +17,20 @@ export class SocialPosts extends React.Component {
         this.setState({view: view});
     }
 
+    addPost = (title, thought) => {
+        let feed = this.state.feed;
+        feed.push({title: title, post: thought})
+        console.log(feed);
+        this.setState({view: !this.state.view, feed: feed});
+    }
+
     render() {
         return (
             <div>
-                <p>My Thoughts</p>
+                <p>Mister Taco's Thoughts</p>
                 <button onClick={this.toggleView}>New Thought</button>
-                <AddPost view={this.state.view}></AddPost>
-                <Feed posts={posts} view={!this.state.view}></Feed>
+                <AddPost view={this.state.view} addPost={this.addPost}></AddPost>
+                <Feed posts={this.state.feed} view={!this.state.view}></Feed>
             </div>
         );
     }
