@@ -32,9 +32,9 @@ export class AddPost extends React.Component {
         return (
             <form className={viewClass} onSubmit={this.handleSubmit}>
                 <p className='Title'>Title</p>
-                <input type='text' value={this.state.title} onChange={this.handleNewTitle}></input>
+                <input type='text' value={this.state.title} onChange={this.handleNewTitle} className='post-Input'></input>
                 <p className='Title'>Thought</p>
-                <input type='textarea' value={this.state.thought} onChange={this.handleNewThought}></input>
+                <input type='textarea' value={this.state.thought} onChange={this.handleNewThought} className='post-Input'></input>
                 <button>Add Post</button>
             </form>
         );

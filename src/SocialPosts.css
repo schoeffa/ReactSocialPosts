@@ -1,0 +1,44 @@
+.Feed {
+    background-color: #FEFEFF;
+    border-radius: 10px;
+    padding: 10px;
+    width: 75vw;
+    box-shadow: 2px 2px 20px 2px #FE654F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Header {
+    align-self: center;
+    background: #FEFEFF;
+    color: #FE654F;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Yatra One';
+    font-size: 4em;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px #FED18C;
+}
+
+.Add-thought {
+    background-color: #FEFEFF;
+    border: none;
+    font-family: B612;
+    font-size: 2em;
+    color: #FEFEFF;
+    text-shadow: 5px 5px 2px #D6EFFF;
+    transition: all 2s;
+}
+
+.Add-thought:hover {
+    -webkit-text-stroke: 1px black;
+    color: #D6EFFF;
+    text-shadow: 5px 5px 2px #FED99B;
+}
+
+.Add-thought:focus {
+    outline: none;
+}

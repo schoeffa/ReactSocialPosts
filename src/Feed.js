@@ -1,6 +1,6 @@
 import React from 'react';
 import { Post } from './Post.js';
-import './AddPost.css'
+import './Feed.css'
 
 export class Feed extends React.Component {
     render() {

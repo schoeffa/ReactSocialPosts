@@ -2,6 +2,7 @@ import React from 'react';
 import { Feed } from './Feed.js';
 import { AddPost } from './AddPost.js';
 import posts from './Posts.json';
+import './SocialPosts.css';
 
 export class SocialPosts extends React.Component {
     constructor(props) {
@@ -19,16 +20,16 @@ export class SocialPosts extends React.Component {
 
     addPost = (title, thought) => {
         let feed = this.state.feed;
-        feed.push({title: title, post: thought})
+        feed.unshift({title: title, post: thought})
         console.log(feed);
         this.setState({view: !this.state.view, feed: feed});
     }
 
     render() {
         return (
-            <div>
-                <p>Mister Taco's Thoughts</p>
-                <button onClick={this.toggleView}>New Thought</button>
+            <div className='Feed'>
+                <p className='Header'>Mister Taco's Thoughts</p>
+                <button onClick={this.toggleView} className='Add-thought'>New Thought</button>
                 <AddPost view={this.state.view} addPost={this.addPost}></AddPost>
                 <Feed posts={this.state.feed} view={!this.state.view}></Feed>
             </div>
