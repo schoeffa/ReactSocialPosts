@@ -1,0 +1,39 @@
+.Title {
+    background: #D6EFFF;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-family: 'B612';
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+
+.Post {
+    font-family: 'B612';
+    font-size: .8em;
+    background: #D6EFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Vote-bar {
+    font-family: 'B612';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Up-cat {
+    height: 25px;
+    margin: 0px 10px;
+}
+
+.Down-cat {
+    height: 25px;
+    margin: 0px 10px;
+    transform: rotate(180deg);
+}
+
+.Votes {
+    margin: 0px;
+}

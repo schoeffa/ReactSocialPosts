@@ -1,8 +1,8 @@
 .Display {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .Hide {
     display: none;
 }
-

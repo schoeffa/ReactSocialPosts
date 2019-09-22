@@ -28,9 +28,11 @@
     border: none;
     font-family: B612;
     font-size: 2em;
-    color: #FEFEFF;
+    color: black;
     text-shadow: 5px 5px 2px #D6EFFF;
     transition: all 2s;
+    align-self: center;
+    justify-self: center;
 }
 
 .Add-thought:hover {

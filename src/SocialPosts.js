@@ -19,19 +19,33 @@ export class SocialPosts extends React.Component {
     }
 
     addPost = (title, thought) => {
+        if (title && thought) {
+            let feed = this.state.feed;
+            feed.unshift({title: title, post: thought, upVotes: 0, downVotes: 0})
+            this.setState({view: !this.state.view, feed: feed});
+        } else {
+            this.setState({view: !this.state.view});
+        }
+    }
+
+    handleUpVote = (index) => {
         let feed = this.state.feed;
-        feed.unshift({title: title, post: thought})
-        console.log(feed);
-        this.setState({view: !this.state.view, feed: feed});
+        feed[index].upVotes++;
+        this.setState({feed: feed});
+    }
+
+    handleDownVote = (index) => {
+        let feed = this.state.feed;
+        feed[index].downVotes++;
+        this.setState({feed: feed});
     }
 
     render() {
         return (
             <div className='Feed'>
                 <p className='Header'>Mister Taco's Thoughts</p>
-                <button onClick={this.toggleView} className='Add-thought'>New Thought</button>
                 <AddPost view={this.state.view} addPost={this.addPost}></AddPost>
-                <Feed posts={this.state.feed} view={!this.state.view}></Feed>
+                <Feed posts={this.state.feed} view={!this.state.view} handleUpVote={this.handleUpVote} handleDownVote={this.handleDownVote} toggleView={this.toggleView}></Feed>
             </div>
         );
     }

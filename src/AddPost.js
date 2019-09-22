@@ -15,8 +15,8 @@ export class AddPost extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
         this.props.addPost(this.state.title, this.state.thought);
+        this.setState({title: '', thought: ''});
     }
 
     handleNewThought = (e) => {
@@ -28,14 +28,14 @@ export class AddPost extends React.Component {
     }
 
     render() {
-        const viewClass = this.props.view ? 'Display' : 'Hide';
+        const viewClass = this.props.view ? 'Display Post-form' : 'Hide';
         return (
             <form className={viewClass} onSubmit={this.handleSubmit}>
                 <p className='Title'>Title</p>
-                <input type='text' value={this.state.title} onChange={this.handleNewTitle} className='post-Input'></input>
+                <input type='text' value={this.state.title} onChange={this.handleNewTitle} className='Post-input'></input>
                 <p className='Title'>Thought</p>
-                <input type='textarea' value={this.state.thought} onChange={this.handleNewThought} className='post-Input'></input>
-                <button>Add Post</button>
+                <textarea value={this.state.thought} onChange={this.handleNewThought} className='Post-input Content'></textarea>
+                <button className='Add-button'>Add Post</button>
             </form>
         );
     }

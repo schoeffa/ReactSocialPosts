@@ -1,7 +1,38 @@
-.Display {
-    display: block;
+.Post-form {
+    display: flex;
+    flex-direction: column;
 }
 
-.Hide {
-    display: none;
+.Post-input {
+    border-radius: 5px;
+    margin: 5px;
+    height: 2em;
+    transition: all 1s;
+}
+
+.Post-input:focus {
+    outline: none;
+    transform: scale(1.15);
+    box-shadow: 5px 5px 20px 2px #FE654F;
+    font-family: 'B612';
+}
+
+.Content {
+    height: 25vh;
+}
+
+.Add-button {
+    font-family: 'B612';
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 50%;
+    align-self: center;
+    background-color: #D6EFFF;
+    font-size: 1.5em;
+}
+
+.Add-button:hover {
+    color: #FE654F;
 }
