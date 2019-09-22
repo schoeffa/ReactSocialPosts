@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ReactSocialPosts/static/css/main.6fbec64d.chunk.css",
+    "main.js": "/ReactSocialPosts/static/js/main.ccf32a78.chunk.js",
+    "main.js.map": "/ReactSocialPosts/static/js/main.ccf32a78.chunk.js.map",
+    "runtime~main.js": "/ReactSocialPosts/static/js/runtime~main.d54687e7.js",
+    "runtime~main.js.map": "/ReactSocialPosts/static/js/runtime~main.d54687e7.js.map",
+    "static/js/2.cff647ee.chunk.js": "/ReactSocialPosts/static/js/2.cff647ee.chunk.js",
+    "static/js/2.cff647ee.chunk.js.map": "/ReactSocialPosts/static/js/2.cff647ee.chunk.js.map",
+    "index.html": "/ReactSocialPosts/index.html",
+    "precache-manifest.94c997482e89bbc5d6e760ae3f8158cc.js": "/ReactSocialPosts/precache-manifest.94c997482e89bbc5d6e760ae3f8158cc.js",
+    "service-worker.js": "/ReactSocialPosts/service-worker.js",
+    "static/css/main.6fbec64d.chunk.css.map": "/ReactSocialPosts/static/css/main.6fbec64d.chunk.css.map",
+    "static/media/cat-icon.png": "/ReactSocialPosts/static/media/cat-icon.1b92b5b9.png"
+  }
+}
