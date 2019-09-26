@@ -13,17 +13,17 @@ export class AddPost extends React.Component {
         this.handleNewThought = this.handleNewThought.bind(this);
     }
 
-    const handleSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         this.props.addPost(this.state.title, this.state.thought);
         this.setState({title: '', thought: ''});
     }
 
-    const handleNewThought = (e) => {
+    handleNewThought = (e) => {
         this.setState({thought: e.target.value});
     }
 
-    const handleNewTitle = (e) => {
+    handleNewTitle = (e) => {
         this.setState({title: e.target.value});
     }
 
