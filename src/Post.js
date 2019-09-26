@@ -9,11 +9,11 @@ export class Post extends React.Component {
         this.handleUpVote = this.handleUpVote.bind(this);
     }
 
-    handleUpVote = () => {
+    const handleUpVote = () => {
         this.props.handleUpVote(this.props.post);
     }
 
-    handleDownVote = () => {
+    const handleDownVote = () => {
         this.props.handleDownVote(this.props.post);
     }
 

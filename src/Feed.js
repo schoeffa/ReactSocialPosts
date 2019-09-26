@@ -9,15 +9,15 @@ export class Feed extends React.Component {
         this.handleDownVote = this.handleDownVote.bind(this);
     }
 
-    handleUpVote = (post) => {
+    const handleUpVote = (post) => {
         this.props.handleUpVote(this.props.posts.indexOf(post));
     }
 
-    handleDownVote = (post) => {
+    const handleDownVote = (post) => {
         this.props.handleDownVote(this.props.posts.indexOf(post));
     }
 
-    toggleView = () => {
+    const toggleView = () => {
         this.props.toggleView();
     }
 
